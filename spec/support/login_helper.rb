@@ -18,6 +18,7 @@ module LoginHelper
   def visit_signin
     visit '/'
     click_link('Sign in')
+
   end
 
   def user_login

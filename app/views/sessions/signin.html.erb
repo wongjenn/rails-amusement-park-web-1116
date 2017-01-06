@@ -1,0 +1,15 @@
+<!-- <%= form_tag '/sessions/create' do %>
+  <%= label_tag :user_name, "Select your name" %>
+  <%= collection_select(:user, :id, User.all, :id, :name) %>
+  <%= select_tag options_from_collection_for_select(User.all, :id, :name) %> -->
+  <!-- <%= submit_tag "Sign in" %>
+<% end %> -->
+
+<%= form_tag '/sessions/create' do %>
+  <%= label_tag "Name" %>
+  <%= text_field_tag "user[name]" %> <br />
+
+  <%= label_tag "Password" %>
+  <%= password_field_tag "user[password]" %><br />
+  <%= submit_tag "Sign In" %>
+<% end %>
